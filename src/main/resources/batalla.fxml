@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="652.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.proyectojavafx.controller.BatallaController">
+    <children>
+        <ImageView fitHeight="300.0" fitWidth="347.0" layoutX="242.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../resources/images.jpeg" />
+            </image>
+        </ImageView>
+        <TextArea layoutX="194.0" layoutY="198.0" prefHeight="266.0" prefWidth="248.0" />
+        <TextArea layoutX="524.0" layoutY="198.0" prefHeight="266.0" prefWidth="260.0" />
+        <TextField fx:id="heroesTitulo" layoutX="194.0" layoutY="159.0" text="Héroes" />
+        <TextField fx:id="bestiasTitulo" layoutX="524.0" layoutY="159.0" text="Bestias" />
+        <Button fx:id="btnAgregarPersonaje" layoutX="22.0" layoutY="235.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" text="Agregar personaje" />
+        <Button fx:id="btnRestaurarContenido" layoutX="22.0" layoutY="313.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" text="Restaurar contenido" />
+        <Button fx:id="btnLucha" layoutX="22.0" layoutY="384.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="91.0" text="Lucha" />
+        <Button fx:id="btnSubirHeroe" layoutX="204.0" layoutY="475.0" mnemonicParsing="false" text="Subir" />
+        <Button fx:id="btnBajarHeroe" layoutX="204.0" layoutY="513.0" mnemonicParsing="false" text="Bajar" />
+        <Button fx:id="btnEliminarHeroe" layoutX="196.0" layoutY="554.0" mnemonicParsing="false" text="Eliminar" />
+        <Button fx:id="btnSubirBestia" layoutX="524.0" layoutY="475.0" mnemonicParsing="false" text="Subir" />
+        <Button fx:id="btnBajarBestia" layoutX="524.0" layoutY="513.0" mnemonicParsing="false" text="Bajar" />
+        <Button fx:id="btnEliminarBestia" layoutX="516.0" layoutY="554.0" mnemonicParsing="false" text="Eliminar" />
+    </children>
+</AnchorPane>
