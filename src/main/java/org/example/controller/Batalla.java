@@ -42,7 +42,7 @@ public class Batalla {
         int armaduraDefensorBestia = calcularArmaduraDefensorBestia(bestia);
         int armaduraDefensorHeroe = heroe.getArmadura();
 
-        // Ataque del héroe
+
         if (poderOfensivoHeroe > armaduraDefensorBestia) {
           int danio = poderOfensivoHeroe - armaduraDefensorBestia;
           bestia.golpeRecibido(danio);
@@ -57,7 +57,6 @@ public class Batalla {
                   heroe.getNombre(), poderOfensivoHeroe, bestia.getNombre()));
         }
 
-        // Ataque de la bestia
         if (poderOfensivoBestia > armaduraDefensorHeroe) {
           int danio = poderOfensivoBestia - armaduraDefensorHeroe;
           heroe.golpeRecibido(danio);
@@ -72,7 +71,7 @@ public class Batalla {
                   bestia.getNombre(), poderOfensivoBestia, heroe.getNombre()));
         }
 
-        // Eliminación de personajes muertos
+
         if (!bestia.estaVivo()) {
           this.bestias.remove(bestia);
           resultado.append(String.format("¡Muere %s!%n", bestia.getNombre()));
@@ -83,13 +82,12 @@ public class Batalla {
           resultado.append(String.format("¡Muere %s!%n", heroe.getNombre()));
         }
 
-        // Restablece el estado del Elfo para el próximo turno
+
         if (heroe instanceof Elfo) {
           ((Elfo) heroe).resetearEstado();
         }
       }
 
-      // Mostrar estado actual de los personajes
       resultado.append("Estado actual:\n");
       resultado.append("Héroes:\n");
       for (Personaje p : this.heroes) {
@@ -104,7 +102,6 @@ public class Batalla {
       turno++;
     }
 
-    // Determinar el ganador
     if (this.heroes.isEmpty()) {
       resultado.append("¡Victoria de las Bestias!");
     } else if (this.bestias.isEmpty()) {
