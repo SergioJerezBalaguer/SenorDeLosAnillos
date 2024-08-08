@@ -24,10 +24,6 @@ public class Batalla {
     StringBuilder resultado = new StringBuilder();
 
     while (!this.heroes.isEmpty() && !this.bestias.isEmpty()) {
-      if (resultado.length() > 100000) { // Ejemplo de límite para evitar acumulación excesiva
-        resultado.append("El resultado es demasiado extenso para mostrar.");
-        break;
-      }
 
       resultado.append("\nTurno ").append(turno).append(":\n");
       List<Personaje> heroesPorTurno = new ArrayList<>(this.heroes);
